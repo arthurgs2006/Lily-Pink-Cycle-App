@@ -1,0 +1,200 @@
+$primary-color: #831283;
+$white-bg: #fff;
+$secundary-color: #f6aef6;
+$third-color: #c44e93;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../logo/backgroundHome.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  transition: 0.3s;
+  justify-content: center;
+  .logo-element {
+    img {
+      border-radius: 100%;
+      width: 10vh;
+    }
+  }
+  .navbar00 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: $primary-color !important;
+    padding: 1vh;
+    gap: 1.5vh;
+    transition: 0.4s;
+    img {
+      width: 4vh;
+      filter: invert(10%) !important;
+      filter: opacity(70%) !important;
+    }
+    &:hover {
+      padding: 1rem;
+      transition: 0.4s;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside{
+    display: flex;
+    justify-content: right;
+    .icon{
+        width: 4vh;
+        filter: invert(10%) !important;
+        filter: opacity(70%) !important;
+    }
+    .btn-rose {
+        margin: 1rem;
+        background-color: $primary-color;
+        border: 0;
+        border-radius: 1rem;
+        &:active {
+          transition: 0.4s;
+        }
+      }
+}
+
+.sectioncarousel {
+  background-color: $white-bg;
+  border-radius: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .carouselContent {
+    margin: auto 8rem;
+    .div-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    .slide1 {
+      align-items: center;
+      .daysP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: 650;
+        font-size: 15vh;
+        width: 35%;
+        background-color: $primary-color;
+        border-radius: 1rem;
+        box-shadow: $secundary-color 10px 10px 1rem;
+      }
+      p {
+        margin-top: 1.3rem;
+        color: $secundary-color;
+        b {
+          color: $third-color;
+        }
+      }
+    }
+  }
+  .slide2 {
+    display: flex;
+    flex-direction: column;
+    .checkbox-area {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2vh;
+      div {
+        display: flex;
+        gap: 1vh;
+        input {
+          background-color: $third-color;
+          border: 0;
+        }
+      }
+    }
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      background-color: $third-color;
+      border: 0;
+      &:active {
+        transition: 0.4s;
+      }
+    }
+    h2 {
+      color: $primary-color;
+    }
+  }
+}
+
+.principalBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  .sectioncarousel {
+    width: 100vh;
+    height: 50vh;
+  }
+}
+.arrow {
+  background-color: transparent !important;
+}
+.arrow-btn{
+    background-color: $third-color;
+    width: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}

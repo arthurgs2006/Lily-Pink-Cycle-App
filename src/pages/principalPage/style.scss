@@ -1,0 +1,236 @@
+$white: #fff;
+$black: #000;
+$primary-color: #e56ab3;
+$secundary-color: #ffcee6;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.getInPage {
+  height: 100vh;
+  background: linear-gradient(0, $primary-color, $secundary-color);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 10vh;
+    .content{
+        width: 80%;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vh;
+    .btn-nav{
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        background-color: transparent;
+        border-radius: 1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        border: 1px solid $white;
+        padding: 1vh;
+        transition: 0.3s;
+        img{
+            filter: invert(1);
+        }
+        &:hover{
+          padding: 1rem;
+        }
+
+    }
+}
+
+.lilyLogo{
+  border-radius: 4rem;
+}
+
+.access{
+  transition: 0.3s;
+  &:active{
+    padding: 1rem;
+  }
+}
+
+/* Config */
+// $color-bg: #1e1e1e;
+$color-particle: #fff;
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
+
+/* mixins */
+@function particles($max) {
+  $val: 0px 0px $color-particle;
+  @for $i from 1 through $max {
+    $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+  }
+  @return $val;
+}
+
+@mixin particles($max) {
+  box-shadow: particles($max);
+  border-radius: 50%;
+}   
+
+/* Styles */
+
+
+.page-bg, .animation-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.particle:after {
+  position: absolute;
+  content: "";
+  top: $spacing;
+}
+
+.particle-1 {
+  animation: animParticle $time-1 linear infinite;
+  @include particles(1000);
+  height: 2px;
+  width: 2px;
+}
+
+.particle-1:after {
+  @include particles(900);
+  height: 2px;
+  width: 2px;
+}
+
+.particle-2 {
+  animation: animParticle $time-2 linear infinite;
+  @include particles(800);
+  height: 2px;
+  width: 2px;
+}
+
+.particle-2:after {
+  @include particles(500);
+  height: 3px;
+  width: 3px;
+}
+
+.particle-3:after {
+  @include particles(1100);
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+}
+
+.particle-4 {
+  animation: animParticle $time-4 linear infinite;
+  @include particles(1200);
+  height: 1px;
+  width: 1px;
+}
+
+.particle-4:after {
+  @include particles(700);
+  height: 1px;
+  width: 1px;
+}
+
+@keyframes animParticle {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY($spacing * -1);
+  }
+}
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
+}
+
+/*glow*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
+}
+
+
