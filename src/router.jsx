@@ -4,6 +4,7 @@ import Account from "./pages/account/account";
 import PrincipalPage from "./pages/principalPage/PrincipalPage";
 import Feed from "./pages/feed/Feed";
 import Settings from "./pages/settings/Settings";
+import MyAccount from "./components/accountComponents/MyAccount/MyAccount";
 
 const routes = createBrowserRouter([
     {
