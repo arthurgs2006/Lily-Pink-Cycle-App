@@ -22,7 +22,7 @@ export default function () {
             <div className=" slide2">
               <h2>Como se sente hoje?</h2>
               <span className="h5">Sentiu Algumas das Opções abaixo?</span>
-              <form>
+              <section >
                 <section className="checkbox-area">
                   <div className="form-check">
                     <input
@@ -75,11 +75,11 @@ export default function () {
                 <button className="btn btn-primary" type="submit">
                   Adicionar ao Relatório
                 </button>
-              </form>
+              </section>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="1000000">
-            <form className="div-center ">
+            <section className="div-center ">
               <span className="h5">
                 Como foi sua experiência utilizando a nossa aplicação web?
               </span>
@@ -106,7 +106,7 @@ export default function () {
                 </label>
               </div>
               <button type="submit" className="btn btn-primary">Avaliar</button>
-            </form>
+            </section>
           </div>
         </div>
         <button

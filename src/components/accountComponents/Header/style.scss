@@ -1,0 +1,76 @@
+$background-color: #c44e93;
+$white: whitesmoke;
+$secundary-color: #d66baaf1;
+
+.tabBar {
+  // margin-right: 1vh;
+  position: relative;
+  float: left;
+  height: 100vh;
+  background-color: $background-color;
+  .profile-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .upper-area {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      padding-top: 1rem;
+      padding-inline-start: 1rem;
+      gap: 1vh;
+      .logo-img {
+        max-width: 5vh;
+        border-radius: 100%;
+      }
+      .span {
+        color: $white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 550;
+      }
+    }
+    .profile-element {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      .profile {
+        max-width: 20vh;
+      }
+    }
+  }
+  .tabBarLinks {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-y: scroll;
+    max-height: 68%;
+    .box {
+      max-width: 100%;
+      padding: 7vh;
+      border-top: 1px solid $white;
+      text-decoration: none;
+      span {
+        color: $white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: larger;
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 0.9vh;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $secundary-color;
+      border-radius: 3vh;
+    }
+  }
+  .footer {
+    border-top: 1px solid $white;
+    color: $white;
+    font-weight: 550;
+  }
+}

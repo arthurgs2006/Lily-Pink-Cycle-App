@@ -198,3 +198,19 @@ body {
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
 }
+
+// settings
+
+.construction-boundary{
+  display: flex;
+  padding-top: 15%;
+  justify-content: center;
+  flex-direction: column;
+  color: $white-bg;
+  align-items: center;
+}
+
+.lilyLogo{
+  width: 10vh;
+  border-radius: 100%;
+}
