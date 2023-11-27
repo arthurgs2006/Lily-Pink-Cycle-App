@@ -78,7 +78,7 @@ export default function () {
           Feed <b>Pink</b>
         </h1>
       </header>
-      <main className="grid">
+      <main className="flex">
         {elements.map( section => (
             <GridBox alt={section.content} label={section.title} src={section.img} key={section.id} https={section.link}/>
         ))}

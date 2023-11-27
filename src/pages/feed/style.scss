@@ -1,10 +1,11 @@
 $primary-color: #e56ab3;
 $white: #FFF;
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.flex{
     gap: 4vh;
+    display: flex;
+    width: 150vh;
+    flex-flow: row wrap;
     .box{
         background-color: $primary-color;
         display: flex;
@@ -34,4 +35,11 @@ $white: #FFF;
         }
     }
 
+}
+
+@media (max-width: 1930px) {
+    .flex{
+        max-width: 100%;
+        justify-content: center;
+    }
 }
