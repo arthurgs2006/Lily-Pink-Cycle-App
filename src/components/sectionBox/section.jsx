@@ -1,9 +1,14 @@
 import { useState } from "react";
 import useStock from "../../hooks/calculatecycle.js";
+import Alert from "../alert/Alert.jsx";
 
 export default function SectionBox() {
-  const {menstrualDays, ovulationDays, dayCounter} = useStock(); 
+  const { menstrualDays, ovulationDays, dayCounter } = useStock();
+  const [showRatingAlert, setShowRatingAlert] = useState(false);
 
+  const handleRatingAlertClose = () => {
+    setShowRatingAlert(false);
+  };
   return (
     <section className="principalBox container">
       <div
@@ -19,132 +24,141 @@ export default function SectionBox() {
             <div className="info-board " data-aos="flip-up">
               <div className="menstruation-day-counter">
                 <span className="daysP">{menstrualDays}</span>
-                <b className="h5 ">Dias para o próximo ciclo menstrual...</b>
+                <span className="h6 title">
+                  Dias para o próximo ciclo menstrual...
+                </span>
               </div>
               <div className="lower-box">
                 <span className="ovulation-box">{ovulationDays}</span>
-                <p className="h5 ">dias para o período ovulatório.</p>
+                <p className="h5 subtitle ">dias para o período ovulatório.</p>
               </div>
               <div className="lower-box">
                 <span className="cycleday-box">{dayCounter}º</span>
-                <p className="h6 ">dia do ciclo.</p>
+                <p className="h6 subtitle ">dia do ciclo.</p>
               </div>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="1000000">
-            <div className=" slide2 ">
-              <header className="slide2-header">
-                <h2>Como se sente hoje?</h2>
-                <span className="h5">Sentiu Algumas das Opções abaixo?</span>
-              </header>
-              <section className="checkbox-area">
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    name=""
-                    id="flexCheckChecked colica"
-                  />
-                  <label className="form-check-label" htmlFor="colica">
-                    Cólica
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op2"
-                  />
-                  <label className="form-check-label" htmlFor="op2">
-                    Manchas
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op3"
-                  />
-                  <label className="form-check-label" htmlFor="op3">
-                    Sangramento
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Alterações no Sono e Apetite
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Tristeza
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Ansiedade
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Irritabilidade
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Inchaço nas Mamas
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name=""
-                    id="flexCheckChecked op4"
-                  />
-                  <label className="form-check-label" htmlFor="op4">
-                    Fadiga  
-                  </label>
-                </div>
-              </section>
-              <button className="btn btn-primary" type="submit">
-                Adicionar ao Relatório
-              </button>
-            </div>
+            <section className="">
+              <div className=" slide2 ">
+                <header className="slide2-header">
+                  <h2 className="h2 title">Como se sente hoje?</h2>
+                  <span className="h6 title">
+                    Sentiu Algumas das Opções abaixo?
+                  </span>
+                </header>
+                <section className="checkbox-area">
+                  <div className="form-check ">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name=""
+                      id="colica"
+                    />
+                    <label className="form-check-label" htmlFor="colica">
+                      Cólica
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="manchas"
+                    />
+                    <label className="form-check-label " htmlFor="manchas">
+                      Manchas
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="sangramento"
+                    />
+                    <label className="form-check-label" htmlFor="sangramento">
+                      Sangramento
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Insônia"
+                    />
+                    <label className="form-check-label" htmlFor="Insônia">
+                      Insônia
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Tristeza"
+                    />
+                    <label className="form-check-label" htmlFor="Tristeza">
+                      Tristeza
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Ansiedade"
+                    />
+                    <label className="form-check-label" htmlFor="Ansiedade">
+                      Ansiedade
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Irritabilidade"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="Irritabilidade"
+                    >
+                      Irritabilidade
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Inchaço"
+                    />
+                    <label className="form-check-label" htmlFor="Inchaço">
+                      Inchaço nas Mamas
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name=""
+                      id="Fadiga"
+                    />
+                    <label className="form-check-label" htmlFor="Fadiga">
+                      Fadiga
+                    </label>
+                  </div>
+                </section>
+                <button className="btn btn-primary btn-submit" type="submit">
+                  Adicionar ao Relatório
+                </button>
+              </div>
+            </section>
           </div>
           <div className="carousel-item" data-bs-interval="1000000">
-            <section className="div-center ">
+            <section className="div-center calendar">
               <span className="h5">
                 Como foi sua experiência utilizando a nossa aplicação web?
               </span>
@@ -170,9 +184,20 @@ export default function SectionBox() {
                   1 star
                 </label>
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button className="btn" onClick={() => setShowRatingAlert(true)}>
                 Avaliar
               </button>
+
+              {showRatingAlert && (
+                <Alert
+                  onClose={handleRatingAlertClose}
+                  content={
+                    "Obrigado pela avaliação! Confira mais sobre Lily Pink Cycle!"
+                  }
+                  typeAlert={"alert-success"}
+                  closeBtn={true}
+                />
+              )}
             </section>
           </div>
         </div>
@@ -186,7 +211,7 @@ export default function SectionBox() {
             className="carousel-control-prev-icon arrow-btn"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Previous</span>
+          <span className="visually-hidden">Anterior</span>
         </button>
         <button
           className="carousel-control-next arrow"
@@ -198,7 +223,7 @@ export default function SectionBox() {
             className="carousel-control-next-icon arrow-btn"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Next </span>
+          <span className="visually-hidden">Próximo </span>
         </button>
       </div>
     </section>

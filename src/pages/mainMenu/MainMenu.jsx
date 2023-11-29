@@ -5,6 +5,7 @@ import '../../style/style.scss'
 
 
 export default function() {
+
   return(
     <div className="main" data-aos='fade-up'>
       <HeaderContent homeButton={true} />

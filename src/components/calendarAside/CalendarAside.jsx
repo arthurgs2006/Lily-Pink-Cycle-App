@@ -1,5 +1,5 @@
-import calendarIcon from './img/calendarIcon.svg'
-import Calendar from './Calendar/Calendar';
+import calendarIcon from "./img/calendarIcon.svg";
+import Calendar from "./Calendar/Calendar";
 export default function () {
   return (
     <aside className="aside">
@@ -10,7 +10,7 @@ export default function () {
         role="button"
         aria-controls="offcanvasExample"
       >
-        <img src={calendarIcon} alt="calendarIcon" className='icon'/>
+        <img src={calendarIcon} alt="calendarIcon" className="icon" />
       </a>
       <div
         className="offcanvas offcanvas-start offcanva"
@@ -30,12 +30,9 @@ export default function () {
           ></button>
         </div>
         <div className="offcanvas-body calendar">
-            {/* <h1>Espere...</h1>
-            <h6>Esta parte ainda não está pronta para ser visualizada!</h6>
-            <p>Volte aqui outro dia para conferir a verão final do <b>Lily Pink WebApp</b>!</p> */}
-            <Calendar/>
-          </div>
+          <Calendar />
         </div>
+      </div>
     </aside>
   );
 }
