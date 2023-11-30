@@ -8,7 +8,7 @@ export default function () {
       <aside className="tabBar">
         <div className="profile-info">
           <div className="upper-area">
-            <Link to="/homepage" className=" logo-element">
+            <Link to="/homepage" className="logo-element">
               <img src={lilyPinkLogo} alt="lilyPinkLogo" className="logo-img" />
             </Link>
             <span className="text-center span">@useraccount</span>

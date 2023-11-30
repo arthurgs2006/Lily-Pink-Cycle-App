@@ -9,7 +9,7 @@ export default function ({id, labelInfo}) {
           role="switch"
           id={id}
         />
-        <label className="form-check-label" for={id}>
+        <label className="form-check-label" htmlFor={id}>
           {labelInfo}
         </label>
       </div>

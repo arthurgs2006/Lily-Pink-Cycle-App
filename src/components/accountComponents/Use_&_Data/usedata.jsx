@@ -42,18 +42,7 @@ export default function () {
           </div>
           <div className="info-area form-settings">
             <Chart
-              chartType="PieChart"
-              loader={<h1 className="h6">Carregando gráfico</h1>}
-              data={[
-                ["Tipo de uso", "Tempo"],
-                ["Uso do aplicativo", timeUsage],
-                ["Outros", 24 - timeUsage],
-              ]}
-              options={{
-                title: "Tempo de uso do aplicativo",
-              }}
-            />
-            <Chart
+              className=""
               chartType="BarChart"
               loader={<h1>Carregando gráfico</h1>}
               data={[

@@ -2,7 +2,7 @@ $white: whitesmoke;
 $primary-color: #e56ab3;
 $secondary-color: #e766e7;
 $third-color: #a7a7a7;
-.content {
+.MyAccountcontent, .content {
   padding-top: 3vh;
   color: $white;
   clear: none;
@@ -21,13 +21,14 @@ $third-color: #a7a7a7;
     max-width: 100%;
     gap: 1vh;
     .label-box {
-      font-size: x-large;
+      // font-size: x-large;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-weight: 550;
       gap: 1vh;
     }
     .input-box {
       border: 0;
+      max-width: 100%;
       padding: 5vh;
       border-radius: 2rem;
       color: $white;
@@ -46,7 +47,7 @@ $third-color: #a7a7a7;
 
 // Payments
 
-.high-area{
+.high-area {
   max-width: max-content;
   display: flex;
   border-radius: 1rem;
@@ -54,40 +55,40 @@ $third-color: #a7a7a7;
   background-color: $primary-color;
   padding: 1vh;
   gap: 5vh;
-  .value{
+  .value {
     font-size: x-large;
-    font-weight: 700; 
+    font-weight: 700;
   }
-  .payment-info{
+  .payment-info {
     max-width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-right: 3vh;
-    .button-lily{
+    .button-lily {
       font-size: large;
       font-weight: bolder;
     }
   }
-  .flower{
+  .flower {
     width: 30vh;
   }
-  .card-box{
+  .card-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    .creditcard{
+    .creditcard {
       max-width: 40vh;
     }
   }
-  .label{
+  .label {
     align-items: center;
   }
 }
 
 //APP CONFIG
 
-.form-settings{
+.form-settings {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -99,6 +100,58 @@ $third-color: #a7a7a7;
 }
 
 // Use
-.chart{
+.chart {
   border-radius: 1rem;
+}
+
+@media (max-width: 752px) {
+  .titleMyAccount {
+    margin-top: 3vh;
+  }
+  .info-area {
+    padding-left: 10vh;
+    padding-right: 10vh;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    .info-box-area {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      gap: 1vh;
+      .input-box {
+        max-width: 100%;
+        padding: 3vh;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::placeholder {
+          font-size: smaller;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 616px) {
+
+  .titleMyAccount {
+    margin-top: 3vh;
+  }
+  .info-area {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    .info-box-area {
+      width: 100%;
+      .input-box {
+        &::placeholder {
+          font-size: x-large;
+        }
+      }
+    }
+  }
 }

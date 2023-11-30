@@ -111,11 +111,3 @@ export default function () {
     </div>
   );
 }
-
-// export default function(){
-//     return(
-//         <div className="container">
-//             <p>hello</p>
-//         </div>
-//     )
-// }

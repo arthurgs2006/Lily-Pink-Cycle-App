@@ -2,8 +2,8 @@ import '../style/style.scss'
 
 export default function(){
     return(
-        <div className="content container-fluid animate__fadeIn" >
-            <header>
+        <div className="MyAccountcontent container-fluid animate__fadeIn" >
+            <header className='titleMyAccount'>
                 <h1 className="display-6">Minha Conta <b>Lily Pink</b></h1>
             </header>
             <div className="info-area" >
@@ -16,7 +16,7 @@ export default function(){
                     <input id='password' placeholder='***********' disabled className='input-box'/>
                 </div>
                 <div className="info-box-area">
-                    <label htmlFor="name" className='label-box'>Nome Completo:</label>
+                    <label htmlFor="name" className='label-box '>Nome Completo:</label>
                     <input id='name' placeholder='Rayssa Leal Guedes' disabled className='input-box'/>
                 </div>
                 <div className="info-box-area">

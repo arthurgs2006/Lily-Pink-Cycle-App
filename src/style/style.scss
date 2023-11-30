@@ -149,20 +149,21 @@ body {
   }
   .slide2 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    max-width: 100vh;
+    justify-content: center;
     .checkbox-area {
       display: flex;
+      padding: 1rem;
+      align-items: center;
+      max-width: 70vh;
       overflow-x: scroll;
-      height: 15vh;
       gap: 2rem;
       div {
+        padding: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1vh;
-        width: auto;
         flex-direction: row;
         input {
           background-color: $third-color;
@@ -174,7 +175,6 @@ body {
     .btn-submit {
       margin-top: 1rem;
       background-color: $third-color;
-      border: 0;
       &:active {
         transition: 0.4s;
       }
@@ -245,6 +245,15 @@ body {
   margin: 1rem;
   border-radius: 1rem;
 }
+.alertArea{
+  display: flex ;
+  align-items: center;
+  button{
+    margin-left: 1rem;
+  }
+}
+
+
 
 .calendar {
   background-color: transparent;
@@ -257,7 +266,7 @@ body {
   button {
     background-color: transparent;
     color: $third-color;
-    height: 5vh;
+    padding: 1vh;
     border: 3px solid $primary-color;
     border-radius: 1vh;
     &:focus {
@@ -318,7 +327,47 @@ body {
   border-radius: 100%;
 }
 
+// Scroll Bar
+::-webkit-scrollbar {
+  width: 1vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c7c4c4;
+  border-radius: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $third-color;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $third-color;
+}
+
 //Media Query
+
+@media (max-width: 896px) {
+  .slide2 {
+    display: flex;
+    padding-left: 3rem;
+    justify-content: center !important;
+    align-items: center;
+    max-width: 30vh;
+    .slide2-header {
+      padding: 0;
+    }
+    .checkbox-area {
+      display: flex;
+      align-items: center;
+      width: 30vh;
+    }
+  }
+}
 
 @media (max-width: 559px) {
   .sectioncarousel {

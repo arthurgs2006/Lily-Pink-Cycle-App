@@ -22,7 +22,7 @@ export default function () {
               </li>
             </ul>
 
-            <b>Versão Beta 1.3</b>
+            <b>Versão Beta 2.2</b>
           </div>
         </div>
       </div>

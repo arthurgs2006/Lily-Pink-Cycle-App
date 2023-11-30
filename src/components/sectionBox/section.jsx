@@ -5,10 +5,15 @@ import Alert from "../alert/Alert.jsx";
 export default function SectionBox() {
   const { menstrualDays, ovulationDays, dayCounter } = useStock();
   const [showRatingAlert, setShowRatingAlert] = useState(false);
+  const [showFormResponse, setshowFormResponse] = useState(false);
 
   const handleRatingAlertClose = () => {
     setShowRatingAlert(false);
   };
+  const handleFormResponse = () => {
+    setshowFormResponse(false);
+  };
+
   return (
     <section className="principalBox container">
       <div
@@ -42,12 +47,10 @@ export default function SectionBox() {
             <section className="">
               <div className=" slide2 ">
                 <header className="slide2-header">
-                  <h2 className="h2 title">Como se sente hoje?</h2>
-                  <span className="h6 title">
-                    Sentiu Algumas das Opções abaixo?
-                  </span>
+                  <h2 className="h2 ">Como se sente hoje?</h2>
+                  <span className="h6 ">Sentiu Algumas das Opções abaixo?</span>
                 </header>
-                <section className="checkbox-area">
+                <section className="checkbox-area ">
                   <div className="form-check ">
                     <input
                       className="form-check-input"
@@ -151,7 +154,19 @@ export default function SectionBox() {
                     </label>
                   </div>
                 </section>
-                <button className="btn btn-primary btn-submit" type="submit">
+                {showFormResponse && (
+                  <Alert
+                    onClose={handleFormResponse}
+                    content={"Relatório Enviado!"}
+                    typeAlert={"alert-info  "}
+                    closeBtn={true}
+                  />
+                )}
+                <button
+                  className="btn btn-primary btn-submit"
+                  type="submit"
+                  onClick={() => setshowFormResponse(true)}
+                >
                   Adicionar ao Relatório
                 </button>
               </div>

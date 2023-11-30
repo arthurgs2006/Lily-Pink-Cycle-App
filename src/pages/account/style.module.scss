@@ -8,3 +8,12 @@ main{
   width: 100%;
   
 }
+
+@media (max-width: 616px) {
+  .mainContent{
+    display: flex ;
+    flex-direction: column;
+    width: 100vh;
+  }
+
+}

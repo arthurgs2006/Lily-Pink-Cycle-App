@@ -11,19 +11,19 @@ export default function ({ onClose, content, typeAlert, closeBtn }) {
   return (
     showAlert && (
       <div
-        className={`alert alert-dismissible fade show ${typeAlert} mt-3`}
+        className={`alert alert-dismissible fade show ${typeAlert} mt-3 alertArea`}
         role="alert"
         data-aos="flip-up"
       >
-        {content}
+        <b>{content}</b>
         {closeBtn ? (
           <button
             type="button"
-            className="close"
+            className="close btn btn-danger"
             onClick={handleAlertClose}
             aria-label="Close"
           >
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" className="">&times;</span>
           </button>
         ) : null}
       </div>

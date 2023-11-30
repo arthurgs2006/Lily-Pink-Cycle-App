@@ -3,7 +3,7 @@ $white: whitesmoke;
 $secundary-color: #d66baaf1;
 
 .tabBar {
-  // margin-right: 1vh;
+  margin-right: 1vh;
   position: relative;
   float: left;
   height: 100vh;
@@ -31,11 +31,11 @@ $secundary-color: #d66baaf1;
       }
     }
     .profile-element {
-      max-width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
       .profile {
-        max-width: 20vh;
+        max-width: 10vh;
       }
     }
   }
@@ -72,5 +72,27 @@ $secundary-color: #d66baaf1;
     border-top: 1px solid $white;
     color: $white;
     font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+@media (max-width: 616px) {
+  .tabBar {
+    width: 100vh;
+    height: 100vh;
+    background-color: $background-color;
+    .tabBarLinks {
+      .list-element {
+        .box {
+          max-width: 100%;
+          padding: 3vh;
+        }
+      }
+    }
+  }
+}
+
+
+
