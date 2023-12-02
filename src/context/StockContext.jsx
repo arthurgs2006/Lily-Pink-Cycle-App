@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 export function StockContextProvider({ children }) {
   const [menstrualDays, setMenstrualDays] = useState([28]);
   const [ovulationDays, setOvulationDays] = useState([4]);
-  const [dayCounter, setDayCounter] = useState([1]);
 
   const handleMenstrualDays = (dayMenstruation) => {
     const date = Math.abs(new Date(dayMenstruation) - new Date());
@@ -26,25 +25,12 @@ export function StockContextProvider({ children }) {
     }
   };
 
-  const handleDayCount = (dayMenstruation) => {
-    const today = new Date();
-    const date = Math.abs(today.getDate() - dayMenstruation.getDate() - 1);
-    if (date > 26) {
-      return false;
-    } else {
-      setDayCounter(date);
-    }
-    
-  };
-
   const stock = {
     handleMenstrualDays,
     menstrualDays,
     setMenstrualDays,
     handleOvulation,
-    ovulationDays,
-    dayCounter,
-    handleDayCount
+    ovulationDays
   };
   return (
     <StockContext.Provider value={stock}>{children}</StockContext.Provider>

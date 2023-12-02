@@ -10,10 +10,7 @@ export default function YourComponent() {
 
   const {
     handleMenstrualDays,
-    handleOvulation,
-    handleDayCount,
-    modalShow,
-    setModalShow,
+    handleOvulation
   } = useStock();
 
   const formatDate = (date) => {
@@ -26,7 +23,6 @@ export default function YourComponent() {
 
   const verificationDate = (menstruation, ovulation) => {
     if (
-      handleDayCount(menstruation) == false ||
       handleOvulation(ovulation) == false ||
       handleMenstrualDays(menstruation) == false
     ) {
@@ -44,7 +40,6 @@ export default function YourComponent() {
     ovulation.setDate(menstruation.getDate() - 14);
     handleMenstrualDays(menstruation);
     handleOvulation(ovulation);
-    handleDayCount(menstruation);
     if (verificationDate(menstruation, ovulation) == false) {
       setResult(
         updateInfo(

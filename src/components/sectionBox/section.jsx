@@ -37,10 +37,6 @@ export default function SectionBox() {
                 <span className="ovulation-box">{ovulationDays}</span>
                 <p className="h5 subtitle ">dias para o período ovulatório.</p>
               </div>
-              <div className="lower-box">
-                <span className="cycleday-box">{dayCounter}º</span>
-                <p className="h6 subtitle ">dia do ciclo.</p>
-              </div>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="1000000">
